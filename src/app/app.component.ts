@@ -14,4 +14,16 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     
   }
+
+  onMouseEnter(){
+    document.getElementsByClassName('hover-div')[0].setAttribute('style','display:flex; justify-content:center;')
+
+    document.getElementsByClassName('main')[0].setAttribute('style','background-color: #eeeeee; opacity:0.8;')
+  }
+
+  onMouseLeave(){
+    document.getElementsByClassName('hover-div')[0].setAttribute('style','display:none;')
+
+    document.getElementsByClassName('main')[0].setAttribute('style','background-color: unset; opacity:unset;')
+  }
 }

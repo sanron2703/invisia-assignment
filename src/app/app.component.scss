@@ -1,3 +1,6 @@
+.main-div{
+    position: relative;
+}
 .main{
     row-gap: 50px;
    
@@ -123,78 +126,80 @@
             .show{
                 flex-wrap: wrap;
                 gap: 15px;
-                position: relative;
+                cursor: pointer;
                 img{
                     width: 280px;
                 }
-                .hover-card{
-                    display: none;
-                    z-index: 1;
+                
+            }
+        }
+    }
+}
+.hover-div{
+    display: none;
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    bottom: 225px;
+    .hover-card{
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px 15px;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        @media screen and (min-width:'360px') and (max-width:'500px'){
+            flex-direction: column;
+        }
+        p{
+            color: #606060;
+            font-size: 19px;
+            margin-top: 60px;
+            @media screen and (min-width:'360px') and (max-width:'500px'){
+                margin-top: 60px;
+            }
+        }
+        .content{
+            width: 516px;
+            @media screen and (min-width:'360px') and (max-width:'500px'){
+                width: 300px;
+            }
+        }
+        .card{
+            position: relative;
+            margin-left: 20px;
+            cursor: pointer;
+            @media screen and (min-width:'360px') and (max-width:'500px'){
+                margin-left: unset;
+            }
+            .img-1{
+                display: block;
+            }
+            .img-2{
+                display: none;
+            }
+            .dots{
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                column-gap: 5px;
+                @media screen and (min-width:'360px') and (max-width:'500px'){
+                    bottom: 15px;
+                    right: 30px;
+                }
+                p{
                     background-color: white;
-                    border-radius: 8px;
-                    padding: 10px 15px;
-                    column-gap: 20px;
-                    position: absolute;
-                    @media screen and (min-width:'360px') and (max-width:'500px'){
-                        flex-direction: column;
-                    }
-                    p{
-                        color: #606060;
-                        font-size: 19px;
-                        margin-top: 60px;
-                        @media screen and (min-width:'360px') and (max-width:'500px'){
-                            margin-top: 60px;
-                        }
-                    }
-                    .content{
-                        width: 516px;
-                        @media screen and (min-width:'360px') and (max-width:'500px'){
-                            width: 300px;
-                        }
-                    }
-                    .card{
-                        position: relative;
-                        margin-left: 20px;
-                        @media screen and (min-width:'360px') and (max-width:'500px'){
-                            margin-left: unset;
-                        }
-                        .img-1{
-                            display: block;
-                        }
-                        .img-2{
-                            display: none;
-                        }
-                        .dots{
-                            position: absolute;
-                            bottom: 20px;
-                            right: 20px;
-                            column-gap: 5px;
-                            @media screen and (min-width:'360px') and (max-width:'500px'){
-                                bottom: 15px;
-                                right: 30px;
-                            }
-                            p{
-                                background-color: white;
-                                width: 8px;
-                                height: 8px;
-                                border-radius: 50%;
-                            }
-                        }
-                    }
-                    .card:hover{
-                        .img-1{
-                            display: none;
-                        }
-                        .img-2{
-                            display: block;
-                        }
-                    }
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
                 }
             }
-            .show:hover{
-                .hover-card{
-                    display: block;
-                }
+        }
+        .card:hover{
+            .img-1{
+                display: none;
+            }
+            .img-2{
+                display: block;
             }
         }
     }

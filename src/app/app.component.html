@@ -1,59 +1,59 @@
-<section class="flex-row column main">
-    <div class="headsection-bg">
-        <div class="header flex-row align-center content-between">
-            <p>Titans</p>
-            <img src="assets/main-page/title.svg" alt="">
-            <select name="" id="">ENG
-                <option value="eng" class="option">ENG</option>
-                <option value="jap" class="option">JAP</option>
-            </select>
-        </div>
-        <div class="fanclub flex-row column">
-            <p>Fan Club</p>
-            <h2 class="fight-font">YEAGARISTS</h2>
-            <div class="search flex-row align-center content-between">
-                <div class="flex-row align-center">
-                    <img src="assets/main-page/search-icon.svg" alt="" style="max-width: 20px;">
-                    <input type="text" placeholder="Search for a season">
+<div class="main-div">
+    <section class="flex-row column main">
+        <div class="headsection-bg">
+            <div class="header flex-row align-center content-between">
+                <p>Titans</p>
+                <img src="assets/main-page/title.svg" alt="">
+                <select name="" id="">ENG
+                    <option value="eng" class="option">ENG</option>
+                    <option value="jap" class="option">JAP</option>
+                </select>
+            </div>
+            <div class="fanclub flex-row column">
+                <p>Fan Club</p>
+                <h2 class="fight-font">YEAGARISTS</h2>
+                <div class="search flex-row align-center content-between">
+                    <div class="flex-row align-center">
+                        <img src="assets/main-page/search-icon.svg" alt="" style="max-width: 20px;">
+                        <input type="text" placeholder="Search for a season">
+                    </div>
+                    <img src="assets/main-page/mic.svg" alt="">
                 </div>
-                <img src="assets/main-page/mic.svg" alt="">
+            </div>
+        </div>
+        <div class="guide-section flex-row column align-center content-center">
+            <div>
+                <h5>Guide for all </h5>
+                <h2 class="fight-font">SEASONS</h2>
+            </div>
+            <div class="seasons">
+                <div class="show flex-row align-center content-center">
+                    <ng-container *ngFor="let fig  of figures">
+                        <img [src]="fig" alt="" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="hover-div content-center">
+        <div class="flex-row column-md hover-card">
+            <div class="content">
+                <div class="flex-row align-center content-between column-md">
+                   <img src="assets/main-page/season-ending.svg" alt="">
+                   <img src="assets/main-page/title.svg" alt="" style="width: 127px;">
+                </div>
+                <p class="font-bungee">Hover on the overlay image to view another image</p>
+            </div>
+            <div class="card">
+                <img class="img-1" src="assets/main-page/season-3.svg" alt="" width="310px">
+                <img class="img-2" src="assets/main-page/season-4.svg" alt="" width="310px">
+                <div class="dots flex-row">
+                    <p></p> 
+                    <p></p> 
+                    <p></p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="guide-section flex-row column align-center content-center">
-        <div>
-            <h5>Guide for all </h5>
-            <h2 class="fight-font">SEASONS</h2>
-        </div>
-        <div class="seasons ">
-            <div class="show flex-row align-center content-center">
-                <ng-container *ngFor="let fig  of figures">
-                    <img [src]="fig" alt="">
-                    <div class="hover-card"><ng-container *ngTemplateOutlet="card"></ng-container></div>
-                </ng-container>
-            </div>
-        </div>
-    </div>
-</section>
-
-<ng-template #card>
-    <div class="flex-row column-md">
-        <div class="content">
-            <div class="flex-row align-center content-between column-md">
-               <img src="assets/main-page/season-ending.svg" alt="">
-               <img src="assets/main-page/title.svg" alt="" style="width: 127px;">
-            </div>
-            <p class="font-bungee">Hover on the overlay image to view another image</p>
-        </div>
-        <div class="card">
-            <img class="img-1" src="assets/main-page/season-3.svg" alt="">
-            <img class="img-2" src="assets/main-page/season-4.svg" alt="">
-            <div class="dots flex-row">
-                <p></p> 
-                <p></p> 
-                <p></p>
-            </div>
-        </div>
-    </div>
-</ng-template>
+</div>
 
